@@ -1,0 +1,1367 @@
+﻿<?php include("connection.php");
+?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+        <title>Best Cars</title>
+
+        <link rel="shortcut icon" href="assets/img/favicon.png" />
+
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+        <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css" />
+        <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css" />
+
+        <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css" />
+
+        <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css" />
+
+        <link rel="stylesheet" href="assets/plugins/aos/aos.css" />
+
+        <link rel="stylesheet" href="assets/css/feather.css" />
+
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <header class="header">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-lg header-nav">
+                        <div class="navbar-header">
+                            <a id="mobile_btn" href="javascript:void(0);">
+                                <span class="bar-icon">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </a>
+                            <a href="index-2.html" class="navbar-brand logo">
+                                <img src="assets/img/Royal-cars.png" class="img-fluid" alt="Logo" />
+                            </a>
+                            <a href="index-2.html" class="navbar-brand logo-small">
+                                <img src="assets/img/Royal-cars.png" class="img-fluid" alt="Logo" />
+                            </a>
+                        </div>
+                        <div class="main-menu-wrapper">
+                            <div class="menu-header">
+                                <a href="index-2.html" class="menu-logo">
+                                    <img src="assets/img/Royal-cars.png" class="img-fluid" alt="Logo" />
+                                </a>
+                                <a id="menu_close" class="menu-close" href="javascript:void(0);"> <i class="fas fa-times"></i></a>
+                            </div>
+                            <ul class="main-nav">
+                                <li class="active"><a href="index-2.html">Home</a></li>
+                                <li><a href="contact-us.html">About Us</a></li>
+                                <li><a href="contact-us.html">Prices</a></li>
+                                <li><a href="contact-us.html">Testimonial</a></li>
+                                <li><a href="contact-us.html">Contact</a></li>
+
+                               
+                              
+                                <!-- <li class="login-link">
+                                    <a href="register.html">Book Now</a>
+                                </li>
+                                <li class="login-link">
+                                    <a href="login.html">Sign In</a>
+                                </li> -->
+                            </ul>
+                        </div>
+                        <ul class="nav header-navbar-rht">
+                            <li class="nav-item">
+                                <a class="nav-link header-login" href="login.html">
+                                    <span><i class="fa-regular fa-user"></i></span>Book Now
+                                </a>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link header-reg" href="register.html">
+                                    <span><i class="fa-solid fa-lock"></i></span>Sign Up
+                                </a>
+                            </li> -->
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <section class="banner-section banner-slider">
+                <div class="container">
+                    <div class="home-banner">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6" data-aos="fade-down">
+                                <div class="warpper">
+                                    <input class="radio" id="one" name="group" type="radio" checked>
+                                    <input class="radio" id="two" name="group" type="radio">
+                                    <input class="radio" id="three" name="group" type="radio">
+                                    <div class="tabs">
+                                    <label class="tab" id="one-tab" for="one">Outstation</label>
+                                    <label class="tab" id="two-tab" for="two">Airport</label>
+                                    <label class="tab" id="three-tab" for="three">Rental</label>
+                                      </div>
+                                    <div class="panels">
+                                    <div class="panel" id="one-panel">
+                                   
+                                    
+                                      <form action="bestcars-insert-data.php" method="post">
+                                          <div class="row">
+                                              <div class="col-lg-6 col-12">
+                                                  <div class="form-group">
+                                                      <label>Name</label>
+                                                      <div class="group-img">
+                                                          <input type="text" class="form-control" name="os_name" placeholder="Enter your Name">
+                                                          
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-6 col-12">
+                                                  <div class="form-group">
+                                                      <label>Phone Number</label>
+                                                      <div class="group-img">
+                                                          <input type="text" class="form-control" name="os_phone_no"  placeholder="Enter Your valid phone number">
+                                                          
+                                                      </div>
+                                                  </div>
+                                              </div>
+                      
+                                              <div class="col-lg-6 col-12">
+                                                  <div class="form-group">
+                                                      <label>Pickup Location</label>
+                                                      <div class="group-img">
+                                                          <input type="text" class="form-control" name="os_PickupLocation" placeholder="Enter City, Airport, or Address">
+                                                          
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-6 col-12">
+                                                  <div class="form-group">
+                                                      <label>Drop Location</label>
+                                                      <div class="group-img">
+                                                          <input type="text" class="form-control" name="os_DropoffLocation"  placeholder="Enter City, Airport, or Address">
+                                                        
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-6 col-12">
+                                                  <div class="form-group">
+                                                      <label>Pickup Date</label>
+                                                  </div>
+                                                  <div class="form-group-wrapp">
+                                                      <div class="form-group date-widget">
+                                                          <div class="group-img">
+                                                              <input type="text" class="form-control datetimepicker" name="os_Pick_Up_Date"  placeholder="04/11/2023">
+                                                            
+                                                          </div>
+                                                      </div>
+                                                   
+                                                  </div>
+                                              </div>
+                      
+                      
+                                              <div class="col-lg-6 col-12">
+                                                  <div class="form-group">
+                                                      <label>Pickup Date</label>
+                                                  </div>
+                                                  <div class="form-group-wrapp">
+                                                      
+                                                      <div class="form-group time-widge">
+                                                          <div class="group-img">
+                                                              <input type="text" class="form-control timepicker" name="os_pickup_time" placeholder="11:00 AM">
+                                                              
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="col-12">
+                                                <input type="submit"  name="book_outstation" class="btn btn-view d-inline-flex align-items-center" value="Book Now">
+                                                  <!-- <a href="" class="btn btn-view d-inline-flex align-items-center">
+                                                     Book Now <span><i class="feather-arrow-right ms-2"></i></span>
+                                                  </a> -->
+                                              </div>
+                                             
+                                             
+                                          </div>
+                                      </form>
+                                  </div>
+                                    <div class="panel" id="two-panel">
+                                      <form action="bestcars-insert-data.php" method="post">
+                                          <div class="row">
+                                              <div class="col-lg-6 col-12">
+                                                  <div class="form-group">
+                                                      <label>Name</label>
+                                                      <div class="group-img">
+                                                          <input type="text" class="form-control" name="Ap_name" placeholder="Enter your Name">
+                                                          
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-6 col-12">
+                                                  <div class="form-group">
+                                                      <label>Phone Number</label>
+                                                      <div class="group-img">
+                                                          <input type="text" class="form-control" name="Ap_phone_no" placeholder="Enter Your valid phone number">
+                                                          
+                                                      </div>
+                                                  </div>
+                                              </div>
+                      
+                                              <div class="col-lg-6 col-12">
+                                                  <div class="form-group">
+                                                      <label>Pickup Location</label>
+                                                      <div class="group-img">
+                                                          <input type="text" class="form-control" name="Ap_PickupLocation" placeholder="Enter City, Airport, or Address">
+                                                          
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-6 col-12">
+                                                  <div class="form-group">
+                                                      <label>Drop Location</label>
+                                                      <div class="group-img">
+                                                          <input type="text" class="form-control" name="Ap_DropoffLocation" placeholder="Enter City, Airport, or Address">
+                                                        
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-6 col-12">
+                                                  <div class="form-group">
+                                                      <label>Pickup Date</label>
+                                                  </div>
+                                                  <div class="form-group-wrapp">
+                                                      <div class="form-group date-widget">
+                                                          <div class="group-img">
+                                                              <input type="text" class="form-control datetimepicker" name="Ap_Pick_Up_Date" placeholder="04/11/2023">
+                                                            
+                                                          </div>
+                                                      </div>
+                                                   
+                                                  </div>
+                                              </div>
+                      
+                      
+                                              <div class="col-lg-6 col-12">
+                                                  <div class="form-group">
+                                                      <label>Pickup Date</label>
+                                                  </div>
+                                                  <div class="form-group-wrapp">
+                                                      
+                                                      <div class="form-group time-widge">
+                                                          <div class="group-img">
+                                                              <input type="text" class="form-control timepicker" name="Ap_pickup_time" placeholder="11:00 AM">
+                                                              
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="col-12">
+                                              <input type="submit"  name="book_airport" class="btn btn-view d-inline-flex align-items-center" value="Book Now">
+                                                  <!-- <a href="" class="btn btn-view d-inline-flex align-items-center">
+                                                     Book Now <span><i class="feather-arrow-right ms-2"></i></span>
+                                                  </a> -->
+                                              </div>
+                                             
+                                             
+                                          </div>
+                                      </form>         
+                                     </div>
+                                    <div class="panel" id="three-panel">
+                                      <form action="bestcars-insert-data.php" method="post">
+                                          <div class="row">
+                                              <div class="col-lg-6 col-12">
+                                                  <div class="form-group">
+                                                      <label>Name</label>
+                                                      <div class="group-img">
+                                                          <input type="text" class="form-control" name="R_name" placeholder="Enter your Name">
+                                                          
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-6 col-12">
+                                                  <div class="form-group">
+                                                      <label>Phone Number</label>
+                                                      <div class="group-img">
+                                                          <input type="text" class="form-control" name="R_phone_no" placeholder="Enter Your valid phone number">
+                                                          
+                                                      </div>
+                                                  </div>
+                                              </div>
+                      
+                                              <div class="col-lg-6 col-12">
+                                                  <div class="form-group">
+                                                      <label>Pickup Location</label>
+                                                      <div class="group-img">
+                                                          <input type="text" class="form-control" name="R_PickupLocation" placeholder="Enter City, Airport, or Address">
+                                                          
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-6 col-12">
+                                                  <div class="form-group">
+                                                      <label>Drop Location</label>
+                                                      <div class="group-img">
+                                                          <input type="text" class="form-control" name="R_DropoffLocation"placeholder="Enter City, Airport, or Address">
+                                                        
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-6 col-12">
+                                                  <div class="form-group">
+                                                      <label>Pickup Date</label>
+                                                  </div>
+                                                  <div class="form-group-wrapp">
+                                                      <div class="form-group date-widget">
+                                                          <div class="group-img">
+                                                              <input type="text" class="form-control datetimepicker" name="R_Pick_Up_Date" placeholder="04/11/2023">
+                                                            
+                                                          </div>
+                                                      </div>
+                                                   
+                                                  </div>
+                                              </div>
+                      
+                      
+                                              <div class="col-lg-6 col-12">
+                                                  <div class="form-group">
+                                                      <label>Pickup Date</label>
+                                                  </div>
+                                                  <div class="form-group-wrapp">
+                                                      
+                                                      <div class="form-group time-widge">
+                                                          <div class="group-img">
+                                                              <input type="text" class="form-control timepicker" name="R_pickup_time" placeholder="11:00 AM">
+                                                              
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="col-12">
+                                              <input type="submit"  name="book_rental" class="btn btn-view d-inline-flex align-items-center" value="Book Now">
+                                                  <!-- <a href="" class="btn btn-view d-inline-flex align-items-center">
+                                                     Book Now <span><i class="feather-arrow-right ms-2"></i></span>
+                                                  </a> -->
+                                              </div>
+                                             
+                                             
+                                          </div>
+                                      </form>
+                                  </div>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-lg-6" data-aos="fade-down">
+                                <div class="banner-imgs">
+                                    <img src="assets/img/car-right.png" class="img-fluid aos" alt="bannerimage" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+
+            <section class="section popular-services popular-explore">
+                <div class="container">
+                    <div class="section-heading" data-aos="fade-down">
+                        <h2>Explore Most Popular Cars</h2>
+                    </div>
+
+                    
+                   <div class="row">
+                                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-down">
+                                    <div class="listing-item">
+                                        <div class="listing-img">
+                                            <a href="">
+                                                <img src="assets/img/cars/1.png" class="img-fluid" alt="Toyota" />
+                                            </a>
+                                       
+                                        </div>
+                                        <div class="listing-content">
+                                            <div class="listing-features">
+                                               
+                                                <h3 class="listing-title">
+                                                    <a href="">SEDAN</a>
+                                                </h3>
+                                                <div class="list-rating">
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <span>(5.0)</span>
+                                                </div>
+                                            </div>
+                                            <div class="listing-details-group">
+                                                <ul>
+                                                    <li>
+                                                        <span><img src="assets/img/icons/car-parts-01.svg" alt="AC" /></span>
+                                                        <p>AC</p>
+                                                    </li>
+                                                    <li >
+                                                        <span><img src="assets/img/icons/car-parts-02.svg" alt="10 KM" /></span>
+                                                        <p style="color:rgb(5, 5, 5);font-weight: 700;">10 KM</p>
+                                                    </li>
+                                                    <li>
+                                                        <span><img src="assets/img/icons/car-parts-06.svg" alt="Persons" /></span>
+                                                        <p>4+1 Persons</p>
+                                                    </li>
+                                                </ul>
+                                               
+                                            </div>
+                                            <div class="listing-location-details">
+                                                <div class="listing-price">
+                                                    Minimum 130km charges need to pay.
+                                                </div>
+                                               
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6"> <div class="listing-button">
+                                                    <a href="" class="btn btn-view d-inline-flex align-items-center">
+                                                        Book Now <span><i class="feather-arrow-right ms-2"></i></span>
+                                                     </a>
+                                                </div></div>
+                                                <div class="col-6"> <div class="listing-button">
+                                                    <a href="" class="btn btn-order">
+                                                        <span><i class="feather-phone me-2"></i></span>Call Now
+                                                    </a>
+                                                </div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-down">
+                                    <div class="listing-item">
+                                        <div class="listing-img">
+                                            <a href="">
+                                                <img src="assets/img/cars/2.png" class="img-fluid" alt="KIA" />
+                                            </a>
+                                            
+                                        </div>
+                                        <div class="listing-content">
+                                            <div class="listing-features">
+                                               
+                                                <h3 class="listing-title">
+                                                    <a href="">PRIME SEDAN</a>
+                                                </h3>
+                                                <div class="list-rating">
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <span>(5.0)</span>
+                                                </div>
+                                            </div>
+                                            <div class="listing-details-group">
+                                                <ul>
+                                                    <li>
+                                                        <span><img src="assets/img/icons/car-parts-01.svg" alt="AC" /></span>
+                                                        <p>AC</p>
+                                                    </li>
+                                                    <li>
+                                                        <span><img src="assets/img/icons/car-parts-02.svg" alt="10 KM" /></span>
+                                                        <p style="color:rgb(5, 5, 5);font-weight: 700;">10 KM</p>
+                                                    </li>
+                                                    <li>
+                                                        <span><img src="assets/img/icons/car-parts-06.svg" alt="Persons" /></span>
+                                                        <p>4+1 Persons</p>
+                                                    </li>
+                                                </ul>
+                                               
+                                            </div>
+                                            <div class="listing-location-details">
+                                                <div class="listing-price">
+                                                    Minimum 130km charges need to pay.
+                                                </div>
+                                               
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6"> <div class="listing-button">
+                                                    <a href="" class="btn btn-view d-inline-flex align-items-center">
+                                                        Book Now <span><i class="feather-arrow-right ms-2"></i></span>
+                                                     </a>
+                                                </div></div>
+                                                <div class="col-6"> <div class="listing-button">
+                                                    <a href="" class="btn btn-order">
+                                                        <span><i class="feather-phone me-2"></i></span>Call Now
+                                                    </a>
+                                                </div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-down">
+                                    <div class="listing-item">
+                                        <div class="listing-img">
+                                            <a href="">
+                                                <img src="assets/img/cars/3.png" class="img-fluid" alt="Audi" />
+                                            </a>
+                                            
+                                        </div>
+                                        <div class="listing-content">
+                                            <div class="listing-features">
+                                                
+                                                <h3 class="listing-title">
+                                                    <a href="">SUV</a>
+                                                </h3>
+                                                <div class="list-rating">
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <span>(5.0)</span>
+                                                </div>
+                                            </div>
+                                            <div class="listing-details-group">
+                                                <ul>
+                                                    <li>
+                                                        <span><img src="assets/img/icons/car-parts-01.svg" alt="AC" /></span>
+                                                        <p>AC</p>
+                                                    </li>
+                                                    <li>
+                                                        <span><img src="assets/img/icons/car-parts-02.svg" alt="10 KM" /></span>
+                                                        <p style="color:rgb(5, 5, 5);font-weight: 700;">10 KM</p>
+                                                    </li>
+                                                    <li>
+                                                        <span><img src="assets/img/icons/car-parts-06.svg" alt="Persons" /></span>
+                                                        <p>6+1 Persons</p>
+                                                    </li>
+                                                </ul>
+                                               
+                                            </div>
+                                            <div class="listing-location-details">
+                                                <div class="listing-price">
+                                                    Minimum 130km charges need to pay.
+                                                </div>
+                                               
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6"> <div class="listing-button">
+                                                    <a href="" class="btn btn-view d-inline-flex align-items-center">
+                                                        Book Now <span><i class="feather-arrow-right ms-2"></i></span>
+                                                     </a>
+                                                </div></div>
+                                                <div class="col-6"> <div class="listing-button">
+                                                    <a href="" class="btn btn-order">
+                                                        <span><i class="feather-phone me-2"></i></span>Call Now
+                                                    </a>
+                                                </div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-down">
+                                    <div class="listing-item">
+                                        <div class="listing-img">
+                                            <a href="">
+                                                <img src="assets/img/cars/4.png" class="img-fluid" alt="Audi" />
+                                            </a>
+                                           
+                                        </div>
+                                        <div class="listing-content">
+                                            <div class="listing-features">
+                                               
+                                                <h3 class="listing-title">
+                                                    <a href="">INNOVA CRYSTA</a>
+                                                </h3>
+                                                <div class="list-rating">
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <span>(5.0)</span>
+                                                </div>
+                                            </div>
+                                            <div class="listing-details-group">
+                                                <ul>
+                                                    <li>
+                                                        <span><img src="assets/img/icons/car-parts-01.svg" alt="AC" /></span>
+                                                        <p>AC</p>
+                                                    </li>
+                                                    <li>
+                                                        <span><img src="assets/img/icons/car-parts-02.svg" alt="10 KM" /></span>
+                                                        <p style="color:rgb(5, 5, 5);font-weight: 700;">10 KM</p>
+                                                    </li>
+                                                    <li>
+                                                        <span><img src="assets/img/icons/car-parts-06.svg" alt="Persons" /></span>
+                                                        <p>6+1 Persons</p>
+                                                    </li>
+                                                </ul>
+                                               
+                                            </div>
+                                            <div class="listing-location-details">
+                                                <div class="listing-price">
+                                                    Minimum 130km charges need to pay.
+                                                </div>
+                                               
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6"> <div class="listing-button">
+                                                    <a href="" class="btn btn-view d-inline-flex align-items-center">
+                                                        Book Now <span><i class="feather-arrow-right ms-2"></i></span>
+                                                     </a>
+                                                </div></div>
+                                                <div class="col-6"> <div class="listing-button">
+                                                    <a href="" class="btn btn-order">
+                                                        <span><i class="feather-phone me-2"></i></span>Call Now
+                                                    </a>
+                                                </div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-down">
+                                    <div class="listing-item">
+                                        <div class="listing-img">
+                                            <a href="">
+                                                <img src="assets/img/cars/car-05.jpg" class="img-fluid" alt="Audi" />
+                                            </a>
+                                            
+                                        </div>
+                                        <div class="listing-content">
+                                            <div class="listing-features">
+                                               
+                                                <h3 class="listing-title">
+                                                    <a href="">2018 Chevrolet Camaro</a>
+                                                </h3>
+                                                <div class="list-rating">
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <span>(5.0)</span>
+                                                </div>
+                                            </div>
+                                            <div class="listing-details-group">
+                                                <ul>
+                                                    <li>
+                                                        <span><img src="assets/img/icons/car-parts-01.svg" alt="AC" /></span>
+                                                        <p>AC</p>
+                                                    </li>
+                                                    <li>
+                                                        <span><img src="assets/img/icons/car-parts-02.svg" alt="10 KM" /></span>
+                                                        <p style="color:rgb(5, 5, 5);font-weight: 700;">10 KM</p>
+                                                    </li>
+                                                    <li>
+                                                        <span><img src="assets/img/icons/car-parts-06.svg" alt="Persons" /></span>
+                                                        <p>5 Persons</p>
+                                                    </li>
+                                                </ul>
+                                               
+                                            </div>
+                                            <div class="listing-location-details">
+                                                <div class="listing-price">
+                                                    Minimum 130km charges need to pay.
+                                                </div>
+                                               
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6"> <div class="listing-button">
+                                                    <a href="" class="btn btn-view d-inline-flex align-items-center">
+                                                        Book Now <span><i class="feather-arrow-right ms-2"></i></span>
+                                                     </a>
+                                                </div></div>
+                                                <div class="col-6"> <div class="listing-button">
+                                                    <a href="" class="btn btn-order">
+                                                        <span><i class="feather-phone me-2"></i></span>Call Now
+                                                    </a>
+                                                </div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-down">
+                                    <div class="listing-item">
+                                        <div class="listing-img">
+                                            <a href="">
+                                                <img src="assets/img/cars/car-06.jpg" class="img-fluid" alt="Audi" />
+                                            </a>
+                                            
+                                        </div>
+                                        <div class="listing-content">
+                                            <div class="listing-features">
+                                                
+                                                <h3 class="listing-title">
+                                                    <a href="">Acura Sport Version</a>
+                                                </h3>
+                                                <div class="list-rating">
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <span>(5.0)</span>
+                                                </div>
+                                            </div>
+                                            <div class="listing-details-group">
+                                                <ul>
+                                                    <li>
+                                                        <span><img src="assets/img/icons/car-parts-01.svg" alt="AC" /></span>
+                                                        <p>AC</p>
+                                                    </li>
+                                                    <li>
+                                                        <span><img src="assets/img/icons/car-parts-02.svg" alt="10 KM" /></span>
+                                                        <p style="color:rgb(5, 5, 5);font-weight: 700;">10 KM</p>
+                                                    </li>
+                                                    <li>
+                                                        <span><img src="assets/img/icons/car-parts-06.svg" alt="Persons" /></span>
+                                                        <p>5 Persons</p>
+                                                    </li>
+                                                </ul>
+                                               
+                                            </div>
+                                            <div class="listing-location-details">
+                                                <div class="listing-price">
+                                                    Minimum 130km charges need to pay.
+                                                </div>
+                                               
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6"> <div class="listing-button">
+                                                    <a href="" class="btn btn-view d-inline-flex align-items-center">
+                                                        Book Now <span><i class="feather-arrow-right ms-2"></i></span>
+                                                     </a>
+                                                </div></div>
+                                                <div class="col-6"> <div class="listing-button">
+                                                    <a href="" class="btn btn-order">
+                                                        <span><i class="feather-phone me-2"></i></span>Call Now
+                                                    </a>
+                                                </div></div>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                        
+                 
+                    
+                        
+            </section>
+
+       
+            <section class="section facts-number">
+                <div class="facts-left">
+                    <img src="assets/img/bg/facts-left.png" class="img-fluid" alt="facts left" />
+                </div>
+                <div class="facts-right">
+                    <img src="assets/img/bg/facts-right.png" class="img-fluid" alt="facts right" />
+                </div>
+                <div class="container">
+                    <div class="section-heading" data-aos="fade-down">
+                        <h2 class="title text-white">Facts By The Numbers</h2>
+                        <p class="description text-white">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                    </div>
+
+                    <div class="counter-group">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-12 d-flex" data-aos="fade-down">
+                                <div class="count-group flex-fill">
+                                    <div class="customer-count d-flex align-items-center">
+                                        <div class="count-img">
+                                            <img src="assets/img/icons/bx-heart.svg" alt />
+                                        </div>
+                                        <div class="count-content">
+                                            <h4><span class="counterUp">16</span>K+</h4>
+                                            <p>Happy Customers</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 d-flex" data-aos="fade-down">
+                                <div class="count-group flex-fill">
+                                    <div class="customer-count d-flex align-items-center">
+                                        <div class="count-img">
+                                            <img src="assets/img/icons/bx-car.svg" alt />
+                                        </div>
+                                        <div class="count-content">
+                                            <h4><span class="counterUp">2547</span>+</h4>
+                                            <p>Count of Cars</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 d-flex" data-aos="fade-down">
+                                <div class="count-group flex-fill">
+                                    <div class="customer-count d-flex align-items-center">
+                                        <div class="count-img">
+                                            <img src="assets/img/icons/bx-headphone.svg" alt />
+                                        </div>
+                                        <div class="count-content">
+                                            <h4><span class="counterUp">625</span>K+</h4>
+                                            <p>Car Center Solutions</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 d-flex" data-aos="fade-down">
+                                <div class="count-group flex-fill">
+                                    <div class="customer-count d-flex align-items-center">
+                                        <div class="count-img">
+                                            <img src="assets/img/icons/bx-history.svg" alt />
+                                        </div>
+                                        <div class="count-content">
+                                            <h4><span class="counterUp">200</span>K+</h4>
+                                            <p>Total Kilometer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+         
+            <section class="section why-choose popular-explore">
+                <div class="choose-left">
+                    <img src="assets/img/bg/choose-left.png" class="img-fluid" alt="Why Choose Us" />
+                </div>
+                <div class="container">
+                    <div class="section-heading" data-aos="fade-down">
+                        <h2>Why Choose Us</h2>
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                    </div>
+
+                    <div class="why-choose-group">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-12 d-flex" data-aos="fade-down">
+                                <div class="card flex-fill">
+                                    <div class="card-body">
+                                        <div class="choose-img choose-black">
+                                            <img src="assets/img/icons/bx-user-check.svg" alt />
+                                        </div>
+                                        <div class="choose-content">
+                                            <h4>Easy & Fast Booking</h4>
+                                            <p>Completely carinate e business testing process whereas fully researched customer service. Globally extensive content with quality.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12 d-flex" data-aos="fade-down">
+                                <div class="card flex-fill">
+                                    <div class="card-body">
+                                        <div class="choose-img choose-secondary">
+                                            <img src="assets/img/icons/bx-user-check.svg" alt />
+                                        </div>
+                                        <div class="choose-content">
+                                            <h4>Many Pickup Location</h4>
+                                            <p>Enthusiastically magnetic initiatives with cross-platform sources. Dynamically target testing procedures through effective.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12 d-flex" data-aos="fade-down">
+                                <div class="card flex-fill">
+                                    <div class="card-body">
+                                        <div class="choose-img choose-primary">
+                                            <img src="assets/img/icons/bx-user-check.svg" alt />
+                                        </div>
+                                        <div class="choose-content">
+                                            <h4>Customer Satisfaction</h4>
+                                            <p>Globally user centric method interactive. Seamlessly revolutionize unique portals corporate collaboration.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section about-testimonial testimonials-section">
+                <div class="container">
+                    <div class="section-heading" data-aos="fade-down">
+                        <h2 class="title text-white">What People say about us?</h2>
+                        <p class="description text-white">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                    </div>
+
+                    <div class="owl-carousel about-testimonials testimonial-group mb-0 owl-theme">
+                        <div class="testimonial-item d-flex">
+                            <div class="card flex-fill">
+                                <div class="card-body">
+                                    <div class="quotes-head"></div>
+                                    <div class="review-box">
+                                        <div class="review-profile">
+                                            <div class="review-img">
+                                                <img src="assets/img/profiles/avatar-02.jpg" class="img-fluid" alt="img" />
+                                            </div>
+                                        </div>
+                                        <div class="review-details">
+                                            <h6>Rabien Ustoc</h6>
+                                            <div class="list-rating">
+                                                <div class="list-rating-star">
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                </div>
+                                                <p><span>(5.0)</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                        aliquip ex ea commodo consequat.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-item d-flex">
+                            <div class="card flex-fill">
+                                <div class="card-body">
+                                    <div class="quotes-head"></div>
+                                    <div class="review-box">
+                                        <div class="review-profile">
+                                            <div class="review-img">
+                                                <img src="assets/img/profiles/avatar-03.jpg" class="img-fluid" alt="img" />
+                                            </div>
+                                        </div>
+                                        <div class="review-details">
+                                            <h6>Valerie L. Ellis</h6>
+                                            <div class="list-rating">
+                                                <div class="list-rating-star">
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                </div>
+                                                <p><span>(5.0)</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                        aliquip ex ea commodo consequat.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-item d-flex">
+                            <div class="card flex-fill">
+                                <div class="card-body">
+                                    <div class="quotes-head"></div>
+                                    <div class="review-box">
+                                        <div class="review-profile">
+                                            <div class="review-img">
+                                                <img src="assets/img/profiles/avatar-04.jpg" class="img-fluid" alt="img" />
+                                            </div>
+                                        </div>
+                                        <div class="review-details">
+                                            <h6>Laverne Marier</h6>
+                                            <div class="list-rating">
+                                                <div class="list-rating-star">
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                </div>
+                                                <p><span>(5.0)</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                        aliquip ex ea commodo consequat.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-item d-flex">
+                            <div class="card flex-fill">
+                                <div class="card-body">
+                                    <div class="quotes-head"></div>
+                                    <div class="review-box">
+                                        <div class="review-profile">
+                                            <div class="review-img">
+                                                <img src="assets/img/profiles/avatar-06.jpg" class="img-fluid" alt="img" />
+                                            </div>
+                                        </div>
+                                        <div class="review-details">
+                                            <h6>Sydney Salmons</h6>
+                                            <div class="list-rating">
+                                                <div class="list-rating-star">
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                </div>
+                                                <p><span>(5.0)</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                        aliquip ex ea commodo consequat.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-item d-flex">
+                            <div class="card flex-fill">
+                                <div class="card-body">
+                                    <div class="quotes-head"></div>
+                                    <div class="review-box">
+                                        <div class="review-profile">
+                                            <div class="review-img">
+                                                <img src="assets/img/profiles/avatar-07.jpg" class="img-fluid" alt="img" />
+                                            </div>
+                                        </div>
+                                        <div class="review-details">
+                                            <h6>Lucas Moquin</h6>
+                                            <div class="list-rating">
+                                                <div class="list-rating-star">
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                </div>
+                                                <p><span>(5.0)</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                        aliquip ex ea commodo consequat.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section faq-section bg-light-primary">
+                <div class="container">
+                    <div class="section-heading" data-aos="fade-down">
+                        <h2>Frequently Asked Questions</h2>
+                    </div>
+
+                    <div class="faq-info">
+                        <div class="faq-card bg-white" data-aos="fade-down">
+                            <h4 class="faq-title">
+                                <a class="collapsed" data-bs-toggle="collapse" href="#faqOne" aria-expanded="false">What is about rental car deals?</a>
+                            </h4>
+                            <div id="faqOne" class="card-collapse collapse">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                    aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-card bg-white" data-aos="fade-down">
+                            <h4 class="faq-title">
+                                <a class="collapsed" data-bs-toggle="collapse" href="#faqTwo" aria-expanded="false">In which areas do you operate?</a>
+                            </h4>
+                            <div id="faqTwo" class="card-collapse collapse">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                    aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-card bg-white" data-aos="fade-down">
+                            <h4 class="faq-title">
+                                <a class="collapsed" data-bs-toggle="collapse" href="#faqThree" aria-expanded="false">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium?</a>
+                            </h4>
+                            <div id="faqThree" class="card-collapse collapse">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                    aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-card bg-white" data-aos="fade-down">
+                            <h4 class="faq-title">
+                                <a class="collapsed" data-bs-toggle="collapse" href="#faqFour" aria-expanded="false">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia?</a>
+                            </h4>
+                            <div id="faqFour" class="card-collapse collapse">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                    aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-card bg-white" data-aos="fade-down">
+                            <h4 class="faq-title">
+                                <a class="collapsed" data-bs-toggle="collapse" href="#faqFive" aria-expanded="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor?</a>
+                            </h4>
+                            <div id="faqFive" class="card-collapse collapse">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                    aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-card bg-white" data-aos="fade-down">
+                            <h4 class="faq-title">
+                                <a class="collapsed" data-bs-toggle="collapse" href="#faqSix" aria-expanded="false">eque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit?</a>
+                            </h4>
+                            <div id="faqSix" class="card-collapse collapse">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                    aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-card bg-white" data-aos="fade-down">
+                            <h4 class="faq-title">
+                                <a class="collapsed" data-bs-toggle="collapse" href="#faqSeven" aria-expanded="false">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod?</a>
+                            </h4>
+                            <div id="faqSeven" class="card-collapse collapse">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                    aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="contact-section">
+                <div class="container">
+                    <div class="section-heading" data-aos="fade-down">
+                        <h2>Contact Us</h2>
+                    </div>
+                    <div class="contact-info-area">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-12 d-flex" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="0.1">
+                                <div class="single-contact-info flex-fill">
+                                    <span><i class="feather-phone-call"></i></span>
+                                    <h3>Phone Number</h3>
+                                    <a href="tel:(888)888-8888">(888) 888-8888</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 d-flex" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="0.2">
+                                <div class="single-contact-info flex-fill">
+                                    <span><i class="feather-mail"></i></span>
+                                    <h3>Email Address</h3>
+                                    <a href="https://dreamsrent.dreamguystech.com/cdn-cgi/l/email-protection#553f3a3d3b26383c213d15302d34382539307b363a38">
+                                        <span class="__cf_email__" data-cfemail="fb919493958896928f93bb9e839a968b979ed5989496">[email&#160;protected]</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 d-flex" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="0.3">
+                                <div class="single-contact-info flex-fill">
+                                    <span><i class="feather-map-pin"></i></span>
+                                    <h3>Location</h3>
+                                    <a href="javascript:void(0);">367 Hillcrest Lane,USA</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 d-flex" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="0.4">
+                                <div class="single-contact-info flex-fill">
+                                    <span><i class="feather-clock"></i></span>
+                                    <h3>Opening Hours</h3>
+                                    <a href="javascript:void(0);">Mon - Sat (10.00AM - 05.30PM)</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-info-area" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="0.5">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="assets/img/contact-info.jpg" class="img-fluid" alt="Contact" />
+                            </div>
+                            <div class="col-lg-6">
+                                <form action="bestcars-insert-data.php" method="post">
+                                    <div class="row">
+                                        <h1>Get in touch!</h1>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Name <span class="text-danger">*</span></label>
+                                                <input type="text" name="name" class="form-control" placeholder />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Email Address <span class="text-danger">*</span></label>
+                                                <input type="text" name="email" class="form-control" placeholder />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Phone number <span class="text-danger">*</span></label>
+                                                <input type="text" name="PhoneNo" class="form-control" placeholder />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Comments <span class="text-danger">*</span></label>
+                                                <textarea class="form-control" name="comments" rows="4" cols="50" placeholder> </textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="submit" class="btn contact-btn" name="contactUs" value="Send Enquiry"></input>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+            <footer class="footer">
+                <div class="footer-top aos" data-aos="fade-up">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="footer-contact footer-widget">
+                                    <h5 class="footer-title">About Us</h5>
+                                  
+                                    <div class="footer-social-widget">
+                                        
+                                        <p>Centric aplications productize front end vortals visualize front end isite results and value added globally for simplify alternative systems without cross-platform models.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="footer-widget footer-menu">
+                                            <h5 class="footer-title">COIMBATORE TAXI</h5>
+                                            <ul >
+                                                <li><a href="" target="_blank">Coimbatore to Bangalore</a></li>
+                                                <li><a href="" target="_blank">Coimbatore to Pondicherry</a></li>
+                                                <li><a href="" target="_blank">Coimbatore to Madurai</a></li>
+                                                <li><a href="" target="_blank">Coimbatore to Trichy</a></li>
+                                                <li><a href="" target="_blank">Coimbatore to Chennai</a></li>
+                                                <li><a href="" target="_blank">Coimbatore to Thanjavur</a></li>
+                                                <li><a href="" target="_blank">Coimbatore to Cuddalore</a></li>
+                                                <li><a href="" target="_blank">Coimbatore to Kanyakumari</a></li>
+                                                <li><a href="" target="_blank">Coimbatore to Kumbakonam</a></li>
+                                                <li><a href="" target="_blank">Coimbatore to Kodaikanal</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="footer-widget footer-menu">
+                                            <h5 class="footer-title">BANGALORE TAXI</h5>
+                                            <ul class="menu">
+                                       
+                                                <li><a href="" target="_blank">Outstation Car Rental</a></li>
+                                               <li><a href="" target="_blank">Online Cab Booking</a></li>
+                                                <li><a href="" target="_blank">Bangalore to Hyderabad</a></li>
+                                                <li><a href="" target="_blank">Bangalore to Tirupati</a></li>
+                                                <li><a href="" target="_blank">Bangalore to Chennai</a></li>
+                                                <li><a href="" target="_blank">Bangalore to Ooty</a></li>
+                                                <li><a href="" target="_blank">Bangalore to Mysore</a></li>
+                                                <li><a href="" target="_blank">Airport Taxi Bangalore</a></li>
+                                                <li><a href="" target="_blank">Bangalore to Kumbakonam</a></li>
+                                                <li><a href="" target="_blank">Bangalore to Kodaikanal</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="footer-widget footer-menu">
+                                            <h5 class="footer-title">CHENNAI TAXI</h5>
+                                            <ul class="menu">
+                                                <li><a href="" target="_blank">Chennai to Bangalore</a></li>
+                                                <li><a href="" target="_blank">Chennai to Pondicherry</a></li>
+                                               <li><a href="" target="_blank"> Chennai to Madurai</a></li>
+                                                <li><a href="" target="_blank">Chennai to Trichy</a></li>
+                                                <li><a href="" target="_blank">Chennai to Coimbatore</a></li>
+                                                <li><a href="" target="_blank">Chennai to Thanjavur</a></li>
+                                                <li><a href="" target="_blank">Chennai to Cuddalore</a></li>
+                                                <li><a href="" target="_blank">Chennai to Kanyakumari</a></li>
+                                                <li><a href="" target="_blank">Chennai to Kumbakonam</a></li>
+                                                <li><a href="" target="_blank">Chennai to Kodaikanal</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="copyright">
+                            <div class="row align-items-center">
+                                <div class="col-md-12">
+                                    <div class="copyright-text">
+                                        <p style="text-align: center;">© 2023 BestCars. All Rights Reserved.</p>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <div class="progress-wrap active-progress">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919px, 307.919px; stroke-dashoffset: 228.265px;"></path>
+            </svg>
+        </div>
+        <div id="content-mobile">
+    		<a href="tel:+91" class="float">
+                <i class="fa fa-phone my-float" style="font-size: 20px; color:#fff;"></i>
+            </a>
+		</div>
+
+        <a href="https://api.whatsapp.com/send/?phone=91&amp;text&amp;app_absent=0" class="float1" target="_blank">
+            <img src="assets\img\cars\whats.png" width="100%" style="border-radius: 25px;">
+         </a>
+
+         <style>
+       
+		
+      
+         </style>
+        <script src="assets/js/jquery-3.6.4.min.js"></script>
+
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+        <script src="assets/js/jquery.waypoints.js"></script>
+        <script src="assets/js/jquery.counterup.min.js"></script>
+
+        <script src="assets/plugins/select2/js/select2.min.js"></script>
+
+        <script src="assets/plugins/aos/aos.js"></script>
+
+        <script src="assets/js/backToTop.js"></script>
+
+        <script src="assets/plugins/moment/moment.min.js"></script>
+        <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+
+        <script src="assets/js/owl.carousel.min.js"></script>
+
+        <script src="assets/js/script.js"></script>
+    </body>
+
+</html>

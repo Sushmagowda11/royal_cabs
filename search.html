@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+        <title>Best Cars</title>
+
+        <link rel="shortcut icon" href="assets/img/favicon.png" />
+
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+        <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css" />
+        <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css" />
+
+        <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css" />
+
+        <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css" />
+
+        <link rel="stylesheet" href="assets/plugins/aos/aos.css" />
+
+        <link rel="stylesheet" href="assets/css/feather.css" />
+
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <header class="header">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-lg header-nav">
+                        <div class="navbar-header">
+                            <a id="mobile_btn" href="javascript:void(0);">
+                                <span class="bar-icon">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </a>
+                            <a href="index-2.html" class="navbar-brand logo">
+                                <img src="assets/img/logo.svg" class="img-fluid" alt="Logo" />
+                            </a>
+                            <a href="index-2.html" class="navbar-brand logo-small">
+                                <img src="assets/img/logo-small.png" class="img-fluid" alt="Logo" />
+                            </a>
+                        </div>
+                        <div class="main-menu-wrapper">
+                            <div class="menu-header">
+                                <a href="index-2.html" class="menu-logo">
+                                    <img src="assets/img/logo.svg" class="img-fluid" alt="Logo" />
+                                </a>
+                                <a id="menu_close" class="menu-close" href="javascript:void(0);"> <i class="fas fa-times"></i></a>
+                            </div>
+                            <ul class="main-nav">
+                                <li><img src="assets/img/globe.png" /></li>
+                                <li class="active">
+                                    <h3>Book out station cabs</h3>
+                                    <p>All Over South india cabs</p>
+                                </li>
+
+                                <li><img src="assets/img/clock.png" /></li>
+                                <li>
+                                    <h3>SUPPORT 24/7</h3>
+                                    <p>We are available</p>
+                                </li>
+
+                                <!-- <li class="login-link">
+                                    <a href="register.html">Book Now</a>
+                                </li>
+                                <li class="login-link">
+                                    <a href="login.html">Sign In</a>
+                                </li> -->
+                            </ul>
+                        </div>
+                        <ul class="nav header-navbar-rht">
+                            <li class="nav-item">
+                                <a class="nav-link header-login" href="">
+                                    <span><i class="fa-regular fa-user"></i></span>REQUEST A CALL
+                                </a>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link header-reg" href="register.html">
+                                    <span><i class="fa-solid fa-lock"></i></span>Sign Up
+                                </a>
+                            </li> -->
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <div class="section-search" style="margin-top: 100px;">
+                <div class="container">
+                    <div class="search-box-banner">
+                        <form action="">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Pickup Location</label>
+                                        <div class="group-img">
+                                            <input type="text" class="form-control" placeholder="Bangalore" disabled />
+                                            <span><i class="feather-map-pin"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Drop Location</label>
+                                        <div class="group-img">
+                                            <input type="text" class="form-control" placeholder="Madakeri" disabled />
+                                            <span><i class="feather-map-pin"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Total km</label>
+                                        <div class="group-img">
+                                            <input type="text" class="form-control" placeholder="2300 km" disabled />
+                                            <span><i class="feather-map-pin"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Duration</label>
+                                        <div class="group-img">
+                                            <input type="text" class="form-control" placeholder="1 day 2 hours" disabled />
+                                            <span><i class="feather-clock"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Pickup Date</label>
+                                    </div>
+                                    <div class="form-group-wrapp">
+                                        <div class="form-group date-widget">
+                                            <div class="group-img">
+                                                <input type="text" class="form-control datetimepicker" placeholder="04/11/2023" disabled />
+                                                <span><i class="feather-calendar"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group time-widge">
+                                            <div class="group-img">
+                                                <input type="text" class="form-control timepicker" placeholder="11:00 AM" disabled />
+                                                <span><i class="feather-clock"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column-group-last">
+                                    <div class="form-group">
+                                        <div class="search-btn">
+                                            <button class="btn search-button" type="submit"><i class="fa fa-edit" aria-hidden="true"></i>Edit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <section class="section popular-services popular-explore">
+                <div class="container">
+                    <div class="section-heading" data-aos="fade-down">
+                        <h2>Explore Most Popular Cars</h2>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-down">
+                            <div class="listing-item">
+                                <div class="listing-img">
+                                    <a href="">
+                                        <img src="assets/img/cars/1.png" class="img-fluid" alt="Toyota" />
+                                    </a>
+                                </div>
+                                <div class="listing-content">
+                                    <div class="listing-features">
+                                        <h3 class="listing-title">
+                                            <a href="">SEDAN</a>
+                                        </h3>
+                                        <div class="list-rating">
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <span>(5.0)</span>
+                                        </div>
+                                    </div>
+                                    <div class="listing-details-group">
+                                        <ul>
+                                            <li style="max-width: 100% !important;">
+                                                <span><img src="assets/img/icons/car-parts-02.svg" alt="10 KM" /></span>
+                                                <p style="color: rgb(5, 5, 5); font-weight: 700;">Total: Rs 30690</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="listing-location-details">
+                                        <div class="listing-price">
+                                            Driver charges Rs 400/- per day
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="listing-button">
+                                                <a href="" class="btn btn-view d-inline-flex align-items-center">
+                                                    Book Now <span><i class="feather-arrow-right ms-2"></i></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-down">
+                            <div class="listing-item">
+                                <div class="listing-img">
+                                    <a href="">
+                                        <img src="assets/img/cars/2.png" class="img-fluid" alt="KIA" />
+                                    </a>
+                                </div>
+                                <div class="listing-content">
+                                    <div class="listing-features">
+                                        <h3 class="listing-title">
+                                            <a href="">PRIME SEDAN</a>
+                                        </h3>
+                                        <div class="list-rating">
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <span>(5.0)</span>
+                                        </div>
+                                    </div>
+                                    <div class="listing-details-group">
+                                        <ul>
+                                            <li style="max-width: 100% !important;">
+                                                <span><img src="assets/img/icons/car-parts-02.svg" alt="10 KM" /></span>
+                                                <p style="color: rgb(5, 5, 5); font-weight: 700;">Total: Rs 30690</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="listing-location-details">
+                                        <div class="listing-price">
+                                            Driver charges Rs 400/- per day
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="listing-button">
+                                                <a href="" class="btn btn-view d-inline-flex align-items-center">
+                                                    Book Now <span><i class="feather-arrow-right ms-2"></i></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-12" data-aos="fade-down">
+                                <div class="listing-item">
+                                    <div class="listing-img">
+                                        <a href="">
+                                            <img src="assets/img/cars/3.png" class="img-fluid" alt="Audi" />
+                                        </a>
+                                    </div>
+                                    <div class="listing-content">
+                                        <div class="listing-features">
+                                            <h3 class="listing-title">
+                                                <a href="">SUV</a>
+                                            </h3>
+                                            <div class="list-rating">
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <i class="fas fa-star filled"></i>
+                                                <span>(5.0)</span>
+                                            </div>
+                                        </div>
+                                        <div class="listing-details-group">
+                                            <ul>
+                                                <li style="max-width: 100% !important;">
+                                                    <span><img src="assets/img/icons/car-parts-02.svg" alt="10 KM" /></span>
+                                                    <p style="color: rgb(5, 5, 5); font-weight: 700;">Total: Rs 30690</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="listing-location-details">
+                                            <div class="listing-price">
+                                                Driver charges Rs 400/- per day
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="listing-button">
+                                                    <a href="" class="btn btn-view d-inline-flex align-items-center">
+                                                        Book Now <span><i class="feather-arrow-right ms-2"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-down">
+                                    <div class="listing-item">
+                                        <div class="listing-img">
+                                            <a href="">
+                                                <img src="assets/img/cars/4.png" class="img-fluid" alt="Audi" />
+                                            </a>
+                                        </div>
+                                        <div class="listing-content">
+                                            <div class="listing-features">
+                                                <h3 class="listing-title">
+                                                    <a href="">INNOVA CRYSTA</a>
+                                                </h3>
+                                                <div class="list-rating">
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <i class="fas fa-star filled"></i>
+                                                    <span>(5.0)</span>
+                                                </div>
+                                            </div>
+                                            <div class="listing-details-group">
+                                                <ul>
+                                                    <li style="max-width: 100% !important;">
+                                                        <span><img src="assets/img/icons/car-parts-02.svg" alt="10 KM" /></span>
+                                                        <p style="color: rgb(5, 5, 5); font-weight: 700;">Total: Rs 30690</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="listing-location-details">
+                                                <div class="listing-price">
+                                                    Driver charges Rs 400/- per day
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="listing-button">
+                                                        <a href="" class="btn btn-view d-inline-flex align-items-center">
+                                                            Book Now <span><i class="feather-arrow-right ms-2"></i></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-6 col-12" data-aos="fade-down">
+                                        <div class="listing-item">
+                                            <div class="listing-img">
+                                                <a href="">
+                                                    <img src="assets/img/cars/car-05.jpg" class="img-fluid" alt="Audi" />
+                                                </a>
+                                            </div>
+                                            <div class="listing-content">
+                                                <div class="listing-features">
+                                                    <h3 class="listing-title">
+                                                        <a href="">2018 Chevrolet Camaro</a>
+                                                    </h3>
+                                                    <div class="list-rating">
+                                                        <i class="fas fa-star filled"></i>
+                                                        <i class="fas fa-star filled"></i>
+                                                        <i class="fas fa-star filled"></i>
+                                                        <i class="fas fa-star filled"></i>
+                                                        <i class="fas fa-star filled"></i>
+                                                        <span>(5.0)</span>
+                                                    </div>
+                                                </div>
+                                                <div class="listing-details-group">
+                                                    <ul>
+                                                        <li style="max-width: 100% !important;">
+                                                            <span><img src="assets/img/icons/car-parts-02.svg" alt="10 KM" /></span>
+                                                            <p style="color: rgb(5, 5, 5); font-weight: 700;">Total: Rs 30690</p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="listing-location-details">
+                                                    <div class="listing-price">
+                                                        Driver charges Rs 400/- per day
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="listing-button">
+                                                            <a href="" class="btn btn-view d-inline-flex align-items-center">
+                                                                Book Now <span><i class="feather-arrow-right ms-2"></i></span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-down">
+                                            <div class="listing-item">
+                                                <div class="listing-img">
+                                                    <a href="">
+                                                        <img src="assets/img/cars/car-06.jpg" class="img-fluid" alt="Audi" />
+                                                    </a>
+                                                </div>
+                                                <div class="listing-content">
+                                                    <div class="listing-features">
+                                                        <h3 class="listing-title">
+                                                            <a href="">Acura Sport Version</a>
+                                                        </h3>
+                                                        <div class="list-rating">
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <span>(5.0)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="listing-details-group">
+                                                        <ul>
+                                                            <li style="max-width: 100% !important;">
+                                                                <span><img src="assets/img/icons/car-parts-02.svg" alt="10 KM" /></span>
+                                                                <p style="color: rgb(5, 5, 5); font-weight: 700;">Total: Rs 30690</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="listing-location-details">
+                                                        <div class="listing-price">
+                                                            Driver charges Rs 400/- per day
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="listing-button">
+                                                                <a href="" class="btn btn-view d-inline-flex align-items-center">
+                                                                    Book Now <span><i class="feather-arrow-right ms-2"></i></span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    
+                                </div>
+                                <footer class="footer">
+                                    <div class="footer-top aos" data-aos="fade-up">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-lg-5">
+                                                    <div class="footer-contact footer-widget">
+                                                        <h5 class="footer-title">About Us</h5>
+
+                                                        <div class="footer-social-widget">
+                                                            <p>
+                                                                Centric aplications productize front end vortals visualize front end isite results and value added globally for simplify alternative systems without cross-platform models.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-7">
+                                                    <div class="row">
+                                                        <div class="col-lg-4 col-md-6">
+                                                            <div class="footer-widget footer-menu">
+                                                                <h5 class="footer-title">COIMBATORE TAXI</h5>
+                                                                <ul>
+                                                                    <li><a href="" target="_blank">Coimbatore to Bangalore</a></li>
+                                                                    <li><a href="" target="_blank">Coimbatore to Pondicherry</a></li>
+                                                                    <li><a href="" target="_blank">Coimbatore to Madurai</a></li>
+                                                                    <li><a href="" target="_blank">Coimbatore to Trichy</a></li>
+                                                                    <li><a href="" target="_blank">Coimbatore to Chennai</a></li>
+                                                                    <li><a href="" target="_blank">Coimbatore to Thanjavur</a></li>
+                                                                    <li><a href="" target="_blank">Coimbatore to Cuddalore</a></li>
+                                                                    <li><a href="" target="_blank">Coimbatore to Kanyakumari</a></li>
+                                                                    <li><a href="" target="_blank">Coimbatore to Kumbakonam</a></li>
+                                                                    <li><a href="" target="_blank">Coimbatore to Kodaikanal</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-6">
+                                                            <div class="footer-widget footer-menu">
+                                                                <h5 class="footer-title">BANGALORE TAXI</h5>
+                                                                <ul class="menu">
+                                                                    <li><a href="" target="_blank">Outstation Car Rental</a></li>
+                                                                    <li><a href="" target="_blank">Online Cab Booking</a></li>
+                                                                    <li><a href="" target="_blank">Bangalore to Hyderabad</a></li>
+                                                                    <li><a href="" target="_blank">Bangalore to Tirupati</a></li>
+                                                                    <li><a href="" target="_blank">Bangalore to Chennai</a></li>
+                                                                    <li><a href="" target="_blank">Bangalore to Ooty</a></li>
+                                                                    <li><a href="" target="_blank">Bangalore to Mysore</a></li>
+                                                                    <li><a href="" target="_blank">Airport Taxi Bangalore</a></li>
+                                                                    <li><a href="" target="_blank">Bangalore to Kumbakonam</a></li>
+                                                                    <li><a href="" target="_blank">Bangalore to Kodaikanal</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-6">
+                                                            <div class="footer-widget footer-menu">
+                                                                <h5 class="footer-title">CHENNAI TAXI</h5>
+                                                                <ul class="menu">
+                                                                    <li><a href="" target="_blank">Chennai to Bangalore</a></li>
+                                                                    <li><a href="" target="_blank">Chennai to Pondicherry</a></li>
+                                                                    <li><a href="" target="_blank"> Chennai to Madurai</a></li>
+                                                                    <li><a href="" target="_blank">Chennai to Trichy</a></li>
+                                                                    <li><a href="" target="_blank">Chennai to Coimbatore</a></li>
+                                                                    <li><a href="" target="_blank">Chennai to Thanjavur</a></li>
+                                                                    <li><a href="" target="_blank">Chennai to Cuddalore</a></li>
+                                                                    <li><a href="" target="_blank">Chennai to Kanyakumari</a></li>
+                                                                    <li><a href="" target="_blank">Chennai to Kumbakonam</a></li>
+                                                                    <li><a href="" target="_blank">Chennai to Kodaikanal</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="footer-bottom">
+                                        <div class="container">
+                                            <div class="copyright">
+                                                <div class="row align-items-center">
+                                                    <div class="col-md-12">
+                                                        <div class="copyright-text">
+                                                            <p style="text-align: center;">© 2023 BestCars. All Rights Reserved.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </footer>
+                                <div class="progress-wrap active-progress">
+                                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919px, 307.919px; stroke-dashoffset: 228.265px;"></path>
+                                    </svg>
+                                </div>
+                                <div id="content-mobile">
+                                    <a href="tel:+91" class="float">
+                                        <i class="fa fa-phone my-float" style="font-size: 20px; color: #fff;"></i>
+                                    </a>
+                                </div>
+                              
+                                <a href="https://api.whatsapp.com/send/?phone=91&amp;text&amp;app_absent=0" class="float1" target="_blank">
+                                    <img src="assets\img\cars\whats.png" width="100%" style="border-radius: 25px;" />
+                                </a>
+
+                                <style></style>
+                                <script src="assets/js/jquery-3.6.4.min.js"></script>
+
+                                <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+                                <script src="assets/js/jquery.waypoints.js"></script>
+                                <script src="assets/js/jquery.counterup.min.js"></script>
+
+                                <script src="assets/plugins/select2/js/select2.min.js"></script>
+
+                                <script src="assets/plugins/aos/aos.js"></script>
+
+                                <script src="assets/js/backToTop.js"></script>
+
+                                <script src="assets/plugins/moment/moment.min.js"></script>
+                                <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+
+                                <script src="assets/js/owl.carousel.min.js"></script>
+
+                                <script src="assets/js/script.js"></script>
+
+
+                                <style>
+                                    .popular-explore {
+    padding: 43px 0 0px 0;
+}
+                                </style>
+                           
+    </body>
+</html>
